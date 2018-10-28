@@ -6,7 +6,7 @@ namespace MyCalculator
     {
         public void Calculator()
         {
-            Console.WriteLine("\r\nBONUS 3 STEP IS RUNNING...");
+            Console.WriteLine("\r\nBONUS 4 STEP IS RUNNING...");
             float num1 = 0; float num2 = 0;
             Console.WriteLine("\r\nConsole Calculator in C#\r");
             Console.WriteLine("------------------------\n");

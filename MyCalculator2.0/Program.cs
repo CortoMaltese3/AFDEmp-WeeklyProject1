@@ -85,21 +85,48 @@ namespace MyCalculator
 
             if (Console.ReadKey().Key == ConsoleKey.Enter)
             {
-                Bonus2 myBonus2 = new Bonus2();
-                myBonus2.Calculator();
+                Console.WriteLine("\r\nNice! Press any key to continue...\r\n");
+                while (Console.ReadKey().Key != ConsoleKey.Escape)
+                {
+                    Console.WriteLine("\r\nChoose an option from the followin BONUS list: ");
+                    Console.WriteLine("\t1 - Bonus 1");
+                    Console.WriteLine("\t2 - Bonus 2");
+                    Console.WriteLine("\t3 - Bonus 3");
+                    Console.WriteLine("\t4 - Bonus 4");
+                    Console.Write("\r\n\tYour option?\r\n \r\n**Notice that if you go with Bonus 1 in the beginning there's no way to exit the loop. Try it in the end!**");
 
-                Bonus3 myBonus3 = new Bonus3();
-                myBonus3.Calculator();
+                    ConsoleKey user_option = Console.ReadKey().Key;
+                    switch (user_option)
+                    {
+                        case ConsoleKey.D1:
+                            Bonus1 myBonus1 = new Bonus1();
+                            myBonus1.Calculator();
+                            break;
 
-                Bonus4 myBonus4 = new Bonus4();
-                myBonus4.Calculator();
+                        case ConsoleKey.D2:
+                            Bonus2 myBonus2 = new Bonus2();
+                            myBonus2.Calculator();
+                            break;
 
-                Bonus1 myBonus1 = new Bonus1();
-                myBonus1.Calculator();
+                        case ConsoleKey.D3:
+                            Bonus3 myBonus3 = new Bonus3();
+                            myBonus3.Calculator();
+                            break;
+
+                        case ConsoleKey.D4:
+                            Bonus4 myBonus4 = new Bonus4();
+                            myBonus4.Calculator();
+                            break;
+
+                    }
+                    Console.WriteLine("\r\nIf you are done checking MyCalculator press Escape. In any other case press any key to continue...");
+                    //Console.ReadKey().Key;
+                }
             }
+                
             else
             {
-                Console.WriteLine("Thanks for using MyCalculator!");
+                Console.WriteLine("\r\nThanks for using MyCalculator!");
                 Console.ReadKey();
             }
         }

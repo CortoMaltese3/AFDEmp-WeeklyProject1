@@ -29,7 +29,7 @@ namespace MyCalculator
             Console.WriteLine("\tsubstract -> Subtract the two numbers");
             Console.WriteLine("\tmultiply -> Multiply the two numbers");
             Console.WriteLine("\tdivide -> Divide the two numbers");
-            Console.Write("Type your option ");
+            Console.Write("Type your option: ");
 
             switch (Console.ReadLine())
             {
