@@ -24,25 +24,25 @@ namespace MyCalculator
                 Console.WriteLine("Type another number, and then press Enter");
                 num2 = float.Parse(Console.ReadLine());
             }
-            Console.WriteLine("Type one of the following to choose a math operation accordingly:");
-            Console.WriteLine("\tadd -> Add the two numbers");
-            Console.WriteLine("\tsubstract -> Subtract the two numbers");
-            Console.WriteLine("\tmultiply -> Multiply the two numbers");
-            Console.WriteLine("\tdivide -> Divide the two numbers");
+            Console.WriteLine("Type one of the following to choose a math operation accordingly: ");
+            Console.WriteLine("\t'1' or add -> Add the two numbers");
+            Console.WriteLine("\t'2' or substract -> Subtract the two numbers");
+            Console.WriteLine("\t'3' or multiply -> Multiply the two numbers");
+            Console.WriteLine("\t'4' or divide -> Divide the two numbers");
             Console.Write("Type your option ");
-
+            
             switch (Console.ReadLine())
             {
-                case "add":
+                case "add": case "1" :
                     Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
                     break;
-                case "substract":
+                case "substract": case "2" :
                     Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
                     break;
-                case "multiply":
+                case "multiply": case "3" :
                     Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
                     break;
-                case "divide":
+                case "divide": case "4" :
                     while (num2 == 0)
                     {
                         Console.WriteLine("Enter a non-zero divisor: ");
@@ -56,6 +56,6 @@ namespace MyCalculator
             }
             Console.Write("Press any key to close the Calculator BONUS 4 console app...\r\n");
             Console.ReadKey();
+        }           
         }
     }
-}

@@ -89,13 +89,26 @@ namespace MyCalculator
                 while (Console.ReadKey().Key != ConsoleKey.Escape)
                 {
                     Console.WriteLine("\r\nChoose an option from the followin BONUS list: ");
-                    Console.WriteLine("\t1 - Bonus 1");
-                    Console.WriteLine("\t2 - Bonus 2");
-                    Console.WriteLine("\t3 - Bonus 3");
+                    Console.WriteLine("\t1 - Bonus 1 (program runs forever)");
+                    Console.WriteLine("\t2 - Bonus 2 (program runs until user presses 'X' or 'x')");
+                    Console.WriteLine("\t3 - Bonus 3 (user needs to type add-substruct-multiply-divide to use math operations accordingly)");
                     Console.WriteLine("\t4 - Bonus 4");
                     Console.Write("\r\n\tYour option?\r\n \r\n**Notice that if you go with Bonus 1 in the beginning there's no way to exit the loop. Try it in the end!**");
 
                     ConsoleKey user_option = Console.ReadKey().Key;
+                    while (user_option != ConsoleKey.D1 & user_option != ConsoleKey.D2 & user_option != ConsoleKey.D3 & user_option != ConsoleKey.D4)
+                    {
+                        Console.WriteLine("\r\n\r\nProgram will run only if you choose one of the four options!");
+                        Console.WriteLine("\r\nChoose an option from the followin BONUS list: ");
+                        Console.WriteLine("\t1 - Bonus 1 (program runs forever)");
+                        Console.WriteLine("\t2 - Bonus 2 (program runs until user presses 'X' or 'x')");
+                        Console.WriteLine("\t3 - Bonus 3 (user needs to type add-substruct-multiply-divide to use math operations accordingly)");
+                        Console.WriteLine("\t4 - Bonus 4");
+                        Console.Write("\r\n\tYour option?\r\n \r\n**Notice that if you go with Bonus 1 in the beginning there's no way to exit the loop. Try it in the end!**");
+
+                        user_option = Console.ReadKey().Key;
+                    }
+                    
                     switch (user_option)
                     {
                         case ConsoleKey.D1:
@@ -123,7 +136,6 @@ namespace MyCalculator
                     //Console.ReadKey().Key;
                 }
             }
-                
             else
             {
                 Console.WriteLine("\r\nThanks for using MyCalculator!");
