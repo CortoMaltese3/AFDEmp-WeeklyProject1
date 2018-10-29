@@ -54,7 +54,7 @@ namespace MyCalculator
             switch (Console.ReadLine())
             {
                 case "a":
-                    Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2)); // Line 32
+                    Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
                     break;
                 case "s":
                     Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
@@ -92,9 +92,10 @@ namespace MyCalculator
                     Console.WriteLine("\t1 - Bonus 1 (program runs forever)");
                     Console.WriteLine("\t2 - Bonus 2 (program runs until user presses 'X' or 'x')");
                     Console.WriteLine("\t3 - Bonus 3 (user needs to type add-substruct-multiply-divide to use math operations accordingly)");
-                    Console.WriteLine("\t4 - Bonus 4");
+                    Console.WriteLine("\t4 - Bonus 4 (user needs to type add-substruct-multiply-divide or 1-2-3-4 respectively to use math operations accordingly)");
                     Console.Write("\r\n\tYour option?\r\n \r\n**Notice that if you go with Bonus 1 in the beginning there's no way to exit the loop. Try it in the end!**");
 
+                    //checking if the user chooses an option in range 1-4
                     ConsoleKey user_option = Console.ReadKey().Key;
                     while (user_option != ConsoleKey.D1 & user_option != ConsoleKey.D2 & user_option != ConsoleKey.D3 & user_option != ConsoleKey.D4)
                     {
@@ -103,12 +104,13 @@ namespace MyCalculator
                         Console.WriteLine("\t1 - Bonus 1 (program runs forever)");
                         Console.WriteLine("\t2 - Bonus 2 (program runs until user presses 'X' or 'x')");
                         Console.WriteLine("\t3 - Bonus 3 (user needs to type add-substruct-multiply-divide to use math operations accordingly)");
-                        Console.WriteLine("\t4 - Bonus 4");
+                        Console.WriteLine("\t4 - Bonus 4 (user needs to type add-substruct-multiply-divide or 1-2-3-4 respectively to use math operations accordingly)");
                         Console.Write("\r\n\tYour option?\r\n \r\n**Notice that if you go with Bonus 1 in the beginning there's no way to exit the loop. Try it in the end!**");
 
-                        user_option = Console.ReadKey().Key;
+                        user_option = Console.ReadKey().Key; //notice that user_option doesn't need to be initiated here since it inherits the property from outside
                     }
                     
+                    //Bonus steps run depending on user's choice
                     switch (user_option)
                     {
                         case ConsoleKey.D1:
@@ -130,10 +132,8 @@ namespace MyCalculator
                             Bonus4 myBonus4 = new Bonus4();
                             myBonus4.Calculator();
                             break;
-
                     }
                     Console.WriteLine("\r\nIf you are done checking MyCalculator press Escape. In any other case press any key to continue...");
-                    //Console.ReadKey().Key;
                 }
             }
             else

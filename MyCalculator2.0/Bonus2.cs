@@ -6,6 +6,7 @@ namespace MyCalculator
     {
         public void Calculator()
         {
+            //Bonus2 will run infinitely unless the user hits the 'x' or 'X' key when asked to do so
             Console.WriteLine("\r\nBONUS 2 STEP IS RUNNING...");
             Console.WriteLine("\r\nType 'x' or 'X' if you want to exit the calculator...");
             while (true & ((Console.ReadKey().Key != ConsoleKey.X)))

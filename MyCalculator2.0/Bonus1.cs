@@ -7,6 +7,7 @@ namespace MyCalculator
         public void Calculator()
         {
             Console.WriteLine("\r\nBONUS 1 STEP IS RUNNING...");
+            //while(true) will run infinitely
             while (true)
             {
                 float num1 = 0; float num2 = 0;
